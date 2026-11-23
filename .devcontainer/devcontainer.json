@@ -1,0 +1,27 @@
+{
+  "name": "Agentic Codespace",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "onCreateCommand": "npm install -g @opencode/cli @openai/codex @anthropic-ai/claude-code supergateway@3.4.3",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "cweijan.vscode-office"
+      ],
+      "settings": {
+        "workbench.editorAssociations": {
+          "*.pptx": "cweijan.officeViewer",
+          "*.pptm": "cweijan.officeViewer",
+          "*.docx": "cweijan.officeViewer",
+          "*.xlsx": "cweijan.officeViewer",
+          "*.xls": "cweijan.officeViewer"
+        }
+      }
+    }
+  }
+}
